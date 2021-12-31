@@ -610,20 +610,14 @@ body {
 }
 
 .modal-form-label-icon {
+  width: 18px;
+  height: 18px;
   position: absolute;
   bottom: 11px;
   left: 12px;
-  width: 18px;
-
-  height: 18px;
   fill: var(--body-title-color);
 
   transition: fill 250ms var(--timing-function);
-}
-
-.modal-form-input:focus-within + .modal-form-label-icon,
-.modal-form-input:not(:placeholder-shown) + .modal-form-label-icon {
-  fill: var(--accent-color);
 }
 
 .form-checkbox-icon {
@@ -639,6 +633,11 @@ body {
 
   transition: background-color 250ms var(--timing-function),
     background-image 250ms var(--timing-function);
+}
+
+.modal-form-input:focus-within + .modal-form-label-icon,
+.modal-form-input:not(:placeholder-shown) + .modal-form-label-icon {
+  fill: var(--accent-color);
 }
 
 .checkbox {
