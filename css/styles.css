@@ -484,6 +484,7 @@ body {
   left: 50%;
   width: 528px;
   height: 581px;
+  padding: 40px;
   background-color: var(--color-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -524,6 +525,159 @@ body {
 
   transition: fill 250ms var(--timing-function);
 }
+
+.backdrop-modal-title {
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  text-align: center;
+
+  color: var(--body-title-color);
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-form-label {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal-form-label-text {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--body-text-color);
+}
+
+.modal-form-label input,
+.modal-form-label textarea {
+  width: 100%;
+
+  border-color: rgba(33, 33, 33, 0.2);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+
+  transition: border-color 250ms var(--timing-function);
+}
+
+.modal-form-input {
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 10px;
+}
+
+.modal-form-textarea {
+  display: block;
+  height: 120px;
+  padding: 12px 16px;
+
+  resize: none;
+}
+
+.modal-form-input:focus-within,
+.modal-form-textarea:focus-within {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-form-input:not(:placeholder-shown),
+.modal-form-textarea:not(:placeholder-shown) {
+  border-color: var(--accent-color);
+  color: var(--body-title-color);
+}
+
+.modal-form-label-textarea {
+  margin-bottom: 20px;
+}
+
+.modal-form-label-checkbox {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  line-height: 1.71;
+}
+
+.modal-form-label-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  fill: var(--body-title-color);
+
+  transition: fill 250ms var(--timing-function);
+}
+
+.modal-form-input:focus-within + .modal-form-label-icon,
+.modal-form-input:not(:placeholder-shown) + .modal-form-label-icon {
+  fill: var(--accent-color);
+}
+
+.form-checkbox-icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+
+  /* чомусь не можу анімувати появу галочки */
+  border: 2px solid var(--body-title-color);
+  border-radius: 2px;
+  background-color: transparent;
+  background-image: none;
+
+  transition: background-color 250ms var(--timing-function),
+    background-image 250ms var(--timing-function);
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox:checked + .form-checkbox-icon {
+  background-image: url('../images/checkbox-checked.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  border: none;
+}
+
+.form-checkbox-link {
+  margin-left: 4px;
+
+  color: var(--accent-color);
+
+  text-decoration: underline;
+}
+
+.btn-modal-form {
+  padding: 10px 32px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--button-hover-text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn-modal-form:hover,
+.btn-modal-form:focus {
+  background: #188ce8;
+}
+
 /* Стилізація footer */
 .footer {
   padding-top: 60px;

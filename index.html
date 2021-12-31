@@ -476,6 +476,45 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <h2 class="backdrop-modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="modal-form">
+          <label class="modal-form-label"
+            ><p class="modal-form-label-text">Имя</p>
+            <input type="text" name="name" placeholder=" " class="modal-form-input" />
+            <svg class="modal-form-label-icon">
+              <use href="./images/icons.svg#icon-person-form"></use>
+            </svg>
+          </label>
+          <label class="modal-form-label"
+            ><p class="modal-form-label-text">Телефон</p>
+            <input type="tel" name="tel" placeholder=" " class="modal-form-input" />
+            <svg class="modal-form-label-icon">
+              <use href="./images/icons.svg#icon-phone-form"></use>
+            </svg>
+          </label>
+          <label class="modal-form-label"
+            ><p class="modal-form-label-text">Почта</p>
+            <input type="email" name="email" placeholder=" " class="modal-form-input" />
+            <svg class="modal-form-label-icon">
+              <use href="./images/icons.svg#icon-email-form"></use>
+            </svg>
+          </label>
+          <label class="modal-form-label modal-form-label-textarea"
+            ><p class="modal-form-label-text">Комментарий</p>
+            <textarea
+              name="coment"
+              placeholder="Введите текст"
+              class="modal-form-textarea"
+            ></textarea>
+          </label>
+          <label class="modal-form-label-checkbox">
+            <input type="checkbox" name="checkbox" class="checkbox" />
+            <span class="form-checkbox-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="./" class="form-checkbox-link">Условия договора</a>
+          </label>
+          <button type="submit" class="btn btn-modal-form">Отправить</button>
+        </form>
       </div>
     </div>
 
